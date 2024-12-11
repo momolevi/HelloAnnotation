@@ -6,17 +6,22 @@ public class Test03 {
         A a = new A();
         System.out.println(A.m);
 
-
+//classLoader获取系统类加载器
         ClassLoader classLoader = ClassLoader.getSystemClassLoader();
         System.out.println(classLoader);
+//        获取系统父类加载器
         ClassLoader classLoader1 = classLoader.getParent();
         System.out.println(classLoader1);
+//        获取根加载器
         ClassLoader classLoader2 = classLoader1.getParent();
         System.out.println(classLoader2);
-//        ClassLoader classLoader3 = Class.forName("com.kuang,annotation.Test03").getClassLoader();
-//        System.out.println(classLoader3);
-//双亲委派机制
+
+//当前类是用什么类加载器加载的
+        System.out.println(Class.forName("com.kuang.annotation.Test03").getClassLoader());
+
+//双亲委派机制  获取java能够加载的路径
         System.out.println(System.getProperty("java.class.path"));
+
     }
 
 
