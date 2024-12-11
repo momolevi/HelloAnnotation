@@ -2,7 +2,7 @@ package com.kuang.annotation;
 
 import java.util.Arrays;
 
-public class Test04 {
+public class Declared {
     public static void main(String[] args) throws NoSuchFieldException {
         BMW bmw = new BMW();
         System.out.println(Arrays.toString(BMW.class.getDeclaredMethods()));
