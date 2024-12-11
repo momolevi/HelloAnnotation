@@ -1,7 +1,6 @@
 package com.kuang.annotation;
 
 import org.junit.Test;
-import scala.Int;
 
 import java.lang.annotation.*;
 
@@ -32,13 +31,13 @@ public class Test01 {
 
 class User{
     String name;
-    Int id;
+    int id;
     String Telephone;
 
     public User() {
     }
 
-    public User(String name, Int id, String telephone) {
+    public User(String name, int id, String telephone) {
         this.name = name;
         this.id = id;
         Telephone = telephone;
@@ -52,11 +51,11 @@ class User{
         this.name = name;
     }
 
-    public Int getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Int id) {
+    public void setId(int id) {
         this.id = id;
     }
 
