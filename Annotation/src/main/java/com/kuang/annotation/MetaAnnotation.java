@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import java.lang.annotation.*;
 
-public class Test01 {
+public class MetaAnnotation {
 
     @Test
     @MyAnnotation(name = "gigi")

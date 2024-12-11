@@ -1,6 +1,6 @@
 package com.kuang.annotation;
 
-public class Test03 {
+public class ClassLoaderLesson {
 
     public static void main(String[] args) throws ClassNotFoundException {
         A a = new A();

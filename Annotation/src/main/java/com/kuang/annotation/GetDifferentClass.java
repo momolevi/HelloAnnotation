@@ -5,7 +5,7 @@ import scala.tools.nsc.transform.patmat.Interface;
 
 import java.lang.annotation.ElementType;
 
-public class Test02 {
+public class GetDifferentClass {
 
 
     public static void main(String[] args) throws ClassNotFoundException {
@@ -37,7 +37,7 @@ public class Test02 {
         System.out.println(c8);
         System.out.println(c9);
         System.out.println(c10);
-        System.out.println(c11);                      
+        System.out.println(c11);
     }
 }
 
