@@ -153,13 +153,35 @@ interface java.lang.Override
         Method method = u.getClass().getDeclaredMethod("setName",String.class);
         method.invoke(u, "李四");
         System.out.println(u.getName());
-    ```
+```
     
 ## setAccessible(true) 启用和禁用安全检查
-提高访问效率
+## Accessable属性是继承自AccessibleObject 类. 功能是启用或禁用安全检查 ；
+true   关闭检查-------提高访问效率
+false  打开检查
+反射过程中打开检查会更慢
+1540毫秒
+800毫秒
 ```java 
+ long starttime = System.currentTimeMillis();
 
-    ```
+User user3 = new User();
+        for (int i = 0; i < 10000000; i++) {
+Method method = user3.getClass().getDeclaredMethod("getName");
+            method.setAccessible(true);
+            method.invoke(user3);
+        }
+long endtime = System.currentTimeMillis();
+        System.out.println(endtime - starttime + "毫秒");
+    }
+```
 
+## 范型Generic 共有获取参数的3个方法
+getGenericParameterTypes()
+getGenericReturnType()
+getGenericExceptionTypes()
 
-
+(ParameterizedType) 接口负责转型 才可以用getActualTypeArguments()、 getRawType()、 getOwnerType();
+getActualTypeArguments()---把最外面一层马甲去掉；
+getRawType()--获取声明泛型的类或者接口，也就是泛型中<>前面的那个值
+getOwnerType()
