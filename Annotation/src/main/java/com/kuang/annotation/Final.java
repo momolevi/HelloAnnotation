@@ -19,8 +19,11 @@ public class Final{
         Test test= (Test) student.getAnnotation(Test.class);
         System.out.println(test.value());
 
-       Field f = student.getDeclaredField("name");
-       f.getAnnotation()
+       Field f = student.getDeclaredField("id");
+        System.out.println(f.getAnnotation(field.class).name());
+        System.out.println(f.getAnnotation(field.class).length());
+
+        System.out.println("==========");
     }
 
 }
