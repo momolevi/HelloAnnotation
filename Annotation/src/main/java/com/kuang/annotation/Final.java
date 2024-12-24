@@ -16,6 +16,7 @@ public class Final{
             System.out.println(annotation.annotationType());
         }
 
+
         Test test= (Test) student.getAnnotation(Test.class);
         System.out.println(test.value());
 
